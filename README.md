@@ -42,20 +42,19 @@ mindmap
 journey
     title Путешествие пользователя в балльно-рейтинговой системе
     section Регистрация пользователя
-      Студент: 5: Регистрируется в системе
-      Преподаватель: 5: Регистрируется в системе
+      Регистрируется в системе: 5: Студент, Преподаватель
     section Проставление оценок
-      Преподаватель: 5: Проставляет баллы за лекции и задания
-      Система: 4: Обрабатывает баллы и сохраняет в базе данных
+    Проставляет баллы за лекции и задания  : 5: Преподаватель
+       Обрабатывает баллы и сохраняет в базе данных: 4:Система
     section Вычисление итогового рейтинга
-      Система: 5: Вычисляет итоговый балл студента
-      Студент: 4: Просматривает итоговый рейтинг
+      Вычисляет итоговый балл студента: 5: Система
+      Просматривает итоговый рейтинг: 4: Студент
     section Формирование отчетов
-      Система: 5: Генерирует отчет по успеваемости
-      Преподаватель: 5: Анализирует отчет по студентам
+     Генерирует отчет по успеваемости : 5: Система
+      Анализирует отчет по студентам: 5: Преподаватель
     section Оповещение о результатах
-      Система: 5: Отправляет уведомление о новых оценках студенту
-      Студент: 4: Получает уведомление и проверяет оценки
+     Отправляет уведомление о новых оценках студенту : 5: Система
+     Получает уведомление и проверяет оценки : 4: Студент
 ```
 
 ### 3. Квадрантная диаграмма (Quadrant Chart)
@@ -116,13 +115,19 @@ gitGraph
     commit id: "Developed notification service"
     checkout develop
 
-    checkout main
-    commit id: "Integrated all microservices into main"
     checkout develop
     merge feature/grade-service id: "Merged grade service"
     merge feature/rating-service id: "Merged rating service"
     merge feature/report-service id: "Merged report service"
     merge feature/notification-service id: "Merged notification service"
     commit id: "Final version with all services integrated"
+  
+    checkout main
+    merge develop id: "Integrated all microservices into main"
+
+    checkout develop
     commit id: "Bug fixes and optimizations"
+
+    checkout main
+    merge develop id: "Bug fixed"
 ```
