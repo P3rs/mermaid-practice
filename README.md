@@ -32,12 +32,6 @@ mindmap
     Уведомления
       Оценки
       Статусы заданий
-    Технологии
-      Backend(Spring Boot)
-      Frontend(React)
-      База данных(MySQL)
-      Кэширование(Redis)
-      Сообщения(Kafka)
 ```
 
 ### 2. Диаграмма путешествия пользователя (User Journey)
